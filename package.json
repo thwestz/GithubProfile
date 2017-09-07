@@ -1,11 +1,11 @@
 {
-  "name": "ES6",
+  "name": "beer-search",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "transpile": "browserify js/index.js -o build/main.bundle.js -t [babelify --presets es2015 ]",
+    "transpile": "browserify js/index.js -o build/main.bundle.js -t [ babelify --presets es2015 ]",
     "start": "http-server"
   },
   "author": "Chaiwat Wongchuen 57102011043",

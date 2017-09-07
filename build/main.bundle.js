@@ -4,8 +4,8 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var getGithubProfile = exports.getGithubProfile = function getGithubProfile() {
-  return fetch('https://api.github.com/users/thwestz');
+var getBeers = exports.getBeers = function getBeers() {
+  return fetch('https://api.punkapi.com/v2/beers');
 };
 
 },{}],2:[function(require,module,exports){
@@ -13,12 +13,16 @@ var getGithubProfile = exports.getGithubProfile = function getGithubProfile() {
 
 var _api = require('./api');
 
-(0, _api.getGithubProfile)().then(function (response) {
-  return response.json();
+(0, _api.getBeers)().then(function (response) {
+    return response.json();
 }).catch(function (e) {
-  return console.err('Fail');
+    return console.err('Fail');
 }).then(function (response) {
-  return console.log(response);
+    return console.log(response);
 });
+
+var test = function test() {
+    console.log('abc');
+};
 
 },{"./api":1}]},{},[2]);
